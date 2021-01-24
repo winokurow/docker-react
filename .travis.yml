@@ -6,4 +6,4 @@ before_install:
   - docker build -t iwinokurow/docker-react -f Dockerfile.dev .
 
 script:
-  - npm run -e CI=true iwinokurow/docker-react test
+  - docker run -e CI=true iwinokurow/docker-react test
